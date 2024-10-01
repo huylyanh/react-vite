@@ -3,18 +3,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+//arrow function:  () => { }
+//component = html + css + js
+//Trong React: component la 1 cach de thao tac voi html
+// --> viet MyComponent duoi dang tag
+const MyComponent = () => {
+  // trong arrow function phai return va tra ra html
+  return (
+    <div>huy & first react</div>
+  );
+}
+
 const App = () => {
   const [count, setCount] = useState(0)
-
-  // function myFunction() {
-  //   console.log("test abc")
-  // }
-  // myFunction()
-
-  const myFunction = () => {
-    return console.log("run my arrow")
-  }
-  myFunction();
 
   return (
     <>
@@ -27,6 +28,7 @@ const App = () => {
         </a>
       </div>
       <h1>Hello World </h1>
+      <MyComponent />
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
