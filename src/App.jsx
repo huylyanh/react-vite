@@ -15,10 +15,16 @@ const App = () => {
   // JSX: cho phep viet js trong html bang cach su dung {}
   // {}: dau ngoac tuong tu nhu object có {key:value}
 
+  const addNewTodo = (name) => {
+    alert(`call me ${name}`)
+  }
+
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
-      <TodoNew />
+      <TodoNew
+        addNewTodo={addNewTodo}
+      />
       <TodoData
         // khai bao props
         name={prop_1}
