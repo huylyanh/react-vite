@@ -1,41 +1,36 @@
-import { useState } from 'react'
+import './components/todo/todo.css'
+import TodoData from './components/todo/TodoData'
+import TodoNew from './components/todo/TodoNew'
 import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import ABC from './components/learn/MyComponent'
-//import SecondComponent from './components/learn/SecondComponent'
-import { SecondComponent, ThirdComponent } from './components/learn/SecondComponent'
-
 
 const App = () => {
-  const [count, setCount] = useState(0)
+
+  const prop_1 = "Huy Lý";
+  const prop_2 = 20;
+  const data = {
+    address: "HCMC",
+    country: "VN"
+  }
+
+  // JSX: cho phep viet js trong html bang cach su dung {}
+  // {}: dau ngoac tuong tu nhu object có {key:value}
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="todo-container">
+      <div className="todo-title">Todo List</div>
+      <TodoNew />
+      <TodoData
+        // khai bao props
+        name={prop_1}
+        age={prop_2}
+        data={data}
+      />
+
+      <div className='todo-image'>
+        {/* su dung bien so ben trong JSX */}
+        <img src={reactLogo} className="logo" />
       </div>
-      <h1>Hello World </h1>
-      <ABC />
-      <SecondComponent />
-      <ThirdComponent />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    </div>
   )
 }
 
