@@ -1,7 +1,7 @@
 const TodoData = (props) => {
     //const TodoData = ({ name }) => {
     // props là 1 biến object {}
-    // const { name } = props;
+    const { name } = props;
 
     // hay viet bang cach khac
     // const name = props.name;

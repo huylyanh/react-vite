@@ -1,7 +1,9 @@
 .todo-container {
+  /* khoảng cách top với bottom là px
+  2 bên left right là auto */
     margin: 50px auto;
     width: 600px; 
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
 }
 
 .todo-title {
@@ -13,7 +15,7 @@
 }
 
 .todo-new {
-    border: 1px solid #333;
+    /* border: 1px solid #333; */
     width: 100%; 
     display: flex;
     justify-content: center; 
