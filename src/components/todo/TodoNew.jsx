@@ -2,7 +2,7 @@ import { useState } from "react"
 
 //component: là HTML
 const TodoNew = (props) => {
-    console.log(">>> check props:", props)
+    console.log(">>> check props TodoNew:", props)
 
     //useState hook (getter/ setter)
     //const valueInput = "huy";
@@ -16,6 +16,7 @@ const TodoNew = (props) => {
 
     const handleClick = () => {
         addNewTodo(valueInput)
+        setValueInput("")
     }
 
     //lấy giá trị của ô input
@@ -29,6 +30,7 @@ const TodoNew = (props) => {
                 // 1) Muốn thực thi function: phải bọc vào 1 arrow function
                 // Do su dung hame onChange, nên đầu hàm, nó sẽ tự động cho chúng ta biến "event" (đây là event của HTML)
                 onChange={(event) => handleOnChange(event.target.value)}
+                value={valueInput}
             />
             <button style={{ cursor: "pointer" }}
                 // 2) Không thực thi function
