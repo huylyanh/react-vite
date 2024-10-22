@@ -9,15 +9,16 @@ const TodoNew = (props) => {
 
     //dinh nghia 1 bien và 1 function de cap nhat bien, su dung hook useState
     //destructuring array
-    const [valueInput, setValueInput] = useState("")
+    const [valueInput, setValueInput] = useState("gia tri khoi tao")
 
-    //const { addNewTodo } = props;
+    const { addNewTodo } = props;
     //addNewTodo("Huy here")
 
     const handleClick = () => {
-        console.log(">>> check valueInput: ", valueInput)
+        addNewTodo(valueInput)
     }
 
+    //lấy giá trị của ô input
     const handleOnChange = (input) => {
         setValueInput(input)
     }
@@ -33,6 +34,7 @@ const TodoNew = (props) => {
                 // 2) Không thực thi function
                 // chu y khong co dau dong mo ngoac, neu co: bảo react chay luon function do cho tao
                 onClick={handleClick}>Add</button>
+
             <div>
                 My text input is {valueInput}
             </div>

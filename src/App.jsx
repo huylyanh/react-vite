@@ -22,12 +22,29 @@ const App = () => {
   // {}: dau ngoac tuong tu nhu object có {key:value}
 
   const addNewTodo = (name) => {
-    alert(`call me ${name}`)
+    // alert(`call me ${name}`)
+
+    const newTodo = {
+      id: randomIntFromInterval(1, 1000000),
+      name: name
+    }
+
+    //1) nếu dùng array.push: hàm này trả về chiều dài mảng, làm react khong nen thao tac truc tiep bien state
+    //todoList.push(newTodo)
+
+    //...là copy lại data cũ của todoList và thêm phần tử vào
+    //goi là: js spread syntax
+    setTodoList([...todoList, newTodo])
+  }
+
+  const randomIntFromInterval = (min, max) => { //min and max included
+    return Math.floor(Math.random() * (max - min + 1) + min);
   }
 
   return (
     <div className="todo-container">
       <div className="todo-title">Todo List</div>
+
       <TodoNew
         addNewTodo={addNewTodo}
       />
@@ -43,6 +60,7 @@ const App = () => {
         {/* su dung bien so ben trong JSX */}
         <img src={reactLogo} className="logo" />
       </div>
+
     </div>
   )
 }
