@@ -7,16 +7,16 @@ import { useState } from 'react'
 const App = () => {
 
   const [todoList, setTodoList] = useState([
-    { id: 1, name: "Learning React" },
-    { id: 2, name: "Watching Youtube" }
+    // { id: 1, name: "Learning React" },
+    // { id: 2, name: "Watching Youtube" }
   ])
 
-  const prop_1 = "Huy Lý";
-  const prop_2 = 20;
-  const data = {
-    address: "HCMC",
-    country: "VN"
-  }
+  // const prop_1 = "Huy Lý";
+  // const prop_2 = 20;
+  // const data = {
+  //   address: "HCMC",
+  //   country: "VN"
+  // }
 
   // JSX: cho phep viet js trong html bang cach su dung {}
   // {}: dau ngoac tuong tu nhu object có {key:value}
@@ -32,8 +32,9 @@ const App = () => {
     //1) nếu dùng array.push: hàm này trả về chiều dài mảng, làm react khong nen thao tac truc tiep bien state
     //todoList.push(newTodo)
 
-    //...là copy lại data cũ của todoList và thêm phần tử vào
+    //...: là copy lại data cũ của todoList và thêm phần tử vào
     //goi là: js spread syntax
+
     setTodoList([...todoList, newTodo])
   }
 
@@ -50,9 +51,9 @@ const App = () => {
       />
       <TodoData
         // khai bao props
-        name={prop_1}
-        age={prop_2}
-        data={data}
+        // name={prop_1}
+        // age={prop_2}
+        // data={data}
         todoList={todoList}
       />
 
