@@ -40,7 +40,7 @@ const TodoNew = (props) => {
             <div>
                 My text input is {valueInput}
             </div>
-        </div>
+        </div >
     )
 }
 

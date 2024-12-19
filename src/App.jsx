@@ -49,18 +49,36 @@ const App = () => {
       <TodoNew
         addNewTodo={addNewTodo}
       />
-      <TodoData
-        // khai bao props
-        // name={prop_1}
-        // age={prop_2}
-        // data={data}
-        todoList={todoList}
-      />
 
-      <div className='todo-image'>
-        {/* su dung bien so ben trong JSX */}
-        <img src={reactLogo} className="logo" />
-      </div>
+      {todoList.length > 0 ?
+        <TodoData
+          // khai bao props
+          // name={prop_1}
+          // age={prop_2}
+          // data={data}
+          todoList={todoList}
+        />
+        :
+        <div className='todo-image'>
+          <img src={reactLogo} className="logo" />
+        </div>
+      }
+
+      {/* {todoList.length > 0 &&
+        <TodoData
+          // khai bao props
+          // name={prop_1}
+          // age={prop_2}
+          // data={data}
+          todoList={todoList}
+        />
+      }
+
+      {todoList.length === 0 &&
+        <div className='todo-image'>
+          <img src={reactLogo} className="logo" />
+        </div>
+      } */}
 
     </div>
   )
