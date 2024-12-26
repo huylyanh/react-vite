@@ -4,24 +4,24 @@ import { useState } from "react"
 const TodoNew = (props) => {
     console.log(">>> check props TodoNew:", props)
 
-    //useState hook (getter/ setter)
+    //sủ dụng công cụ của React: useState hook (getter/ setter)
     //const valueInput = "huy";
 
     //dinh nghia 1 bien và 1 function de cap nhat bien, su dung hook useState
     //destructuring array
-    const [valueInput, setValueInput] = useState("gia tri khoi tao")
+    const [valueInput, setValueInput] = useState("Gia tri khoi tao")
 
     const { addNewTodo } = props;
     //addNewTodo("Huy here")
 
-    const handleClick = () => {
-        addNewTodo(valueInput)
-        setValueInput("")
-    }
-
     //lấy giá trị của ô input
     const handleOnChange = (input) => {
         setValueInput(input)
+    }
+
+    const handleClick = () => {
+        addNewTodo(valueInput)
+        setValueInput("")
     }
 
     return (
@@ -35,7 +35,8 @@ const TodoNew = (props) => {
             <button style={{ cursor: "pointer" }}
                 // 2) Không thực thi function
                 // chu y khong co dau dong mo ngoac, neu co: bảo react chay luon function do cho tao
-                onClick={handleClick}>Add</button>
+                onClick={handleClick}
+            >Add</button>
 
             <div>
                 My text input is {valueInput}

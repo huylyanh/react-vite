@@ -15,9 +15,14 @@ const TodoData = (props) => {
     // const age = props.age;
     // const data = props.data;
 
-    const { todoList } = props;
+    const { todoList, deleteTodo } = props;
+
+    const handleClick = (id) => {
+        deleteTodo(id)
+    }
 
     console.log(">>> check props TodoData: ", todoList)
+
     return (
         <div className='todo-data'>
             {/* <div>My name is {name}</div> */}
@@ -30,7 +35,9 @@ const TodoData = (props) => {
                 return (
                     <div className={`todo-item`} key={item.id}>
                         <div>{item.name}</div>
-                        <button>Delete</button>
+                        <button
+                            onClick={() => handleClick(item.id)}
+                            style={{ cursor: "pointer" }}>Delete</button>
                     </div>)
             })}
 
@@ -40,7 +47,6 @@ const TodoData = (props) => {
                 {JSON.stringify(props.todoList)}
             </div> */}
         </div>
-
     )
 }
 

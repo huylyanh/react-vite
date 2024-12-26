@@ -31,15 +31,19 @@ const App = () => {
 
     //1) nếu dùng array.push: hàm này trả về chiều dài mảng, làm react khong nen thao tac truc tiep bien state
     //todoList.push(newTodo)
-
     //...: là copy lại data cũ của todoList và thêm phần tử vào
     //goi là: js spread syntax
-
     setTodoList([...todoList, newTodo])
   }
 
   const randomIntFromInterval = (min, max) => { //min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+
+  const deleteTodo = (id) => {
+    const newTodoList = todoList.filter(item => item.id !== id) // quét từng phần tử, chỉ giữ lại các phần tử có id khác id truyền vào
+    // console.log(">>> newTodoList: ", newTodoList)
+    setTodoList(newTodoList)
   }
 
   return (
@@ -57,6 +61,7 @@ const App = () => {
           // age={prop_2}
           // data={data}
           todoList={todoList}
+          deleteTodo={deleteTodo}
         />
         :
         <div className='todo-image'>
