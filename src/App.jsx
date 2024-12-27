@@ -18,7 +18,7 @@ const App = () => {
   //   country: "VN"
   // }
 
-  // JSX: cho phep viet js trong html bang cach su dung {}
+  // JSX: cho phep viet javascript trong HTML bang cach su dung {}
   // {}: dau ngoac tuong tu nhu object có {key:value}
 
   const addNewTodo = (name) => {

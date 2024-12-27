@@ -27,14 +27,14 @@ const TodoNew = (props) => {
     return (
         <div className='todo-new'>
             <input type="text"
-                // 1) Muốn thực thi function: phải bọc vào 1 arrow function
+                // 1) Cách làm 1: passing a function
                 // Do su dung hame onChange, nên đầu hàm, nó sẽ tự động cho chúng ta biến "event" (đây là event của HTML)
                 onChange={(event) => handleOnChange(event.target.value)}
                 value={valueInput}
             />
             <button style={{ cursor: "pointer" }}
-                // 2) Không thực thi function
-                // chu y khong co dau dong mo ngoac, neu co: bảo react chay luon function do cho tao
+                // 2) Cách làm 2: passing a function
+                // chu y khong co dau (), neu co (): react se chay luon function do, du chua click nut 
                 onClick={handleClick}
             >Add</button>
 
