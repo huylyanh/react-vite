@@ -34,7 +34,7 @@ const TodoNew = (props) => {
             />
             <button style={{ cursor: "pointer" }}
                 // 2) Cách làm 2: passing a function
-                // chu y khong co dau (), neu co (): react se chay luon function do, du chua click nut 
+                // chu y khong co dau (), neu co (): react se chay luon function do khi render trang
                 onClick={handleClick}
             >Add</button>
 
