@@ -13,6 +13,7 @@ import UsersPage from './pages/users.jsx';
 import ProductsPage from './pages/products.jsx';
 
 import './styles/global.css';
+import TodoApp from './components/todo/TodoApp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,6 +21,11 @@ const router = createBrowserRouter([
     // element: <div>Hello world!</div>,
     element: <App />,
     children: [
+      {
+        index: true,
+        // element: <div>homepage child</div>
+        element: <TodoApp />
+      },
       {
         path: "/users",
         element: <UsersPage />
