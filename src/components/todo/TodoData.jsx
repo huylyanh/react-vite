@@ -1,4 +1,6 @@
 const TodoData = (props) => {
+    console.log("---- check props TodoData: ", todoList)
+
     // props là 1 biến object {}
     // {
     //     name: "Huy",
@@ -20,8 +22,6 @@ const TodoData = (props) => {
     const handleClick = (id) => {
         deleteTodo(id)
     }
-
-    console.log(">>> check props TodoData: ", todoList)
 
     return (
         <div className='todo-data'>

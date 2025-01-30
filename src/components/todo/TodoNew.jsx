@@ -2,7 +2,7 @@ import { useState } from "react"
 
 //component: là HTML
 const TodoNew = (props) => {
-    console.log(">>> check props TodoNew:", props)
+    console.log("--- check props TodoNew:", props)
 
     //sủ dụng công cụ của React: useState hook (getter/ setter)
     //const valueInput = "huy";
