@@ -19,6 +19,16 @@ const router = createBrowserRouter([
     path: "/",
     // element: <div>Hello world!</div>,
     element: <App />,
+    children: [
+      {
+        path: "/users",
+        element: <UsersPage />
+      },
+      {
+        path: "/products",
+        element: <ProductsPage />
+      }
+    ]
   },
   {
     path: "/login",
@@ -27,15 +37,7 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <RegisterPage />
-  },
-  {
-    path: "/users",
-    element: <UsersPage />
-  },
-  {
-    path: "/products",
-    element: <ProductsPage />
-  },
+  }
 ]);
 
 // la file chay dau tien
