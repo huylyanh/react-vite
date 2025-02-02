@@ -48,10 +48,10 @@ const router = createBrowserRouter([
 
 // la file chay dau tien
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    {/* render component App */}
-    {/* nhet App vao ben trong div root */}
-    {/* <App /> */}
-    <RouterProvider router={router} />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  // {/* render component App */ }
+  // {/* nhet App vao ben trong div root */ }
+  // {/* <App /> */ }
+  < RouterProvider router={router} />
+  // </React.StrictMode>,
 )
